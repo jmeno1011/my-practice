@@ -1,7 +1,7 @@
 export default function Root() {
   return (
     <>
-      <div id="sidebar">
+      <div id="sidebar" className="w-[22rem] bg-slate-50 border border-slate-200 border-solid ">
         <h1>React Router Contacts</h1>
         <div>
           <form id="search-form" role="search">
