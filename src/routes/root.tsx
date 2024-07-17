@@ -2,9 +2,13 @@ export default function Root() {
   return (
     <>
       <div id="sidebar" className="w-[22rem] bg-slate-50 border border-slate-200 border-solid ">
-        <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
+        <div className="flex items-center gap-2 py-4 px-8 border-t border-gray-300 leading-none order-1">
+          <div className="h1-content"></div>
+          <h1 className="text-base font-medium flex items-center justify-self-start m-0 ">React Router Contacts</h1>
+        </div>
+        {/* <h1 className="text-base font-medium flex items-center m-0 px-4 py-8 border-t border-gray-300 order-1 leading-none">React Router Contacts</h1> */}
+        <div className="px-8 flex items-center gap-2 py-4 border-b border-solid border-gray-300 relative">
+          <form id="search-form" role="search" className="relative">
             <input
               id="q"
               aria-label="Search contacts"
@@ -26,7 +30,7 @@ export default function Root() {
             <button type="submit">New</button>
           </form>
         </div>
-        <nav>
+        <nav className="px-8">
           <ul>
             <li>
               <a href={`/contacts/1`}>Your Name</a>
