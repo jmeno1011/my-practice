@@ -6,18 +6,30 @@ import About from './About.tsx'
 import React from 'react'
 import Root from './routes/root.tsx'
 import ErrorPage from './error-page.tsx'
+import PasswordInput from './pages/PasswordInput.tsx'
+import Contact from './routes/contact.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     // element: <Home />
     element: <Root />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "contacts/:contactId",
+        element: <Contact />,
+      },
+      {
+        path: "about",
+        element: <About />
+      },
+      {
+        path: "/password",
+        element: <PasswordInput />
+      }
+    ]
   },
-  {
-    path: "about",
-    element: <About />
-  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
