@@ -4,8 +4,6 @@ import { createContact, getContacts } from "../contacts";
 
 export default function Root() {
   const { contacts } = useLoaderData() as { contacts: Icontact[] };
-  console.log(contacts);
-
   return (
     <>
       <div
