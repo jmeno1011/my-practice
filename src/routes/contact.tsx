@@ -1,4 +1,5 @@
 import { Form } from "react-router-dom";
+import { Icontact } from "../types/contact";
 
 export default function Contact() {
   const contact = {
@@ -74,14 +75,7 @@ export default function Contact() {
 
 
 interface FavoriteProps{
-  contact: {
-    first: string;
-    last: string;
-    avatar: string;
-    twitter: string;
-    notes: string;
-    favorite: boolean;
-  }
+  contact: Icontact;
 }
 
 function Favorite({ contact }: FavoriteProps) {

@@ -4,10 +4,11 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 // import Home from './Home.tsx'
 import About from './About.tsx'
 import React from 'react'
-import Root from './routes/root.tsx'
+import Root, {loader as rootLoader, action as rootAction} from './routes/root.tsx'
 import ErrorPage from './error-page.tsx'
 import PasswordInput from './pages/PasswordInput.tsx'
 import Contact from './routes/contact.tsx'
+import EnvironmentConfirm from './pages/EnvironmentConfirm.tsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,8 @@ const router = createBrowserRouter([
     // element: <Home />
     element: <Root />,
     errorElement: <ErrorPage />,
+    loader: rootLoader,
+    action: rootAction, 
     children: [
       {
         path: "contacts/:contactId",
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/password",
         element: <PasswordInput />
+      },
+      {
+        path: "/env-confirm",
+        element: <EnvironmentConfirm />
       }
     ]
   },
