@@ -9,6 +9,7 @@ import ErrorPage from './error-page.tsx'
 import PasswordInput from './pages/PasswordInput.tsx'
 import Contact from './routes/contact.tsx'
 import EnvironmentConfirm from './pages/EnvironmentConfirm.tsx'
+import ExampleGetAPIComponent from './pages/ExampleGetAPIComponent/ExampleGetAPIComponent.tsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/env-confirm",
         element: <EnvironmentConfirm />
+      },
+      {
+        path: "/example-get-api-component",
+        element: <ExampleGetAPIComponent />
       }
     ]
   },

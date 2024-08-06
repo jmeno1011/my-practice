@@ -70,6 +70,9 @@ export default function Root() {
             <li>
               <a href={`/env-confirm`}>env-confirm</a>
             </li>
+            <li>
+              <a href={`/example-get-api-component`}>example-get-api-component</a>
+            </li>
           </ul>
           {/* </nav> */}
         </nav>
