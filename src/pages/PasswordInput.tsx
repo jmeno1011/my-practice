@@ -19,6 +19,15 @@ export default function PasswordInput() {
     <div className="flex flex-col gap-4">
       <h1 className="font-bold">Password Forms</h1>
       <SectionLayout>
+        <SectionTitle title="Password Hide1" />
+        <div className="flex gap-4">
+          <input type={hide ? "password" : "text"} />
+          <button onClick={hidePassowrd}>
+            <span>{hide ? "보이기" : "숨기기"}</span>
+          </button>
+        </div>
+      </SectionLayout>
+      <SectionLayout>
         <SectionTitle title="Password Hide" />
         <div className="flex gap-4">
           <input type={hide ? "password" : "text"} />
